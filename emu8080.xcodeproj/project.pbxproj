@@ -18,6 +18,8 @@
 		30C4CCCF29BC98A80004CA7F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4CCCE29BC98A80004CA7F /* Extensions.swift */; };
 		30C4CCD129BDE3180004CA7F /* opcodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4CCD029BDE3180004CA7F /* opcodes.swift */; };
 		30C4CCD329BDE3EB0004CA7F /* machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C4CCD229BDE3EB0004CA7F /* machine.swift */; };
+		30FDBA8729E6DBF800483324 /* display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBA8629E6DBF800483324 /* display.swift */; };
+		30FDBA8929E6DC6800483324 /* memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FDBA8829E6DC6800483324 /* memory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		30C4CCCE29BC98A80004CA7F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		30C4CCD029BDE3180004CA7F /* opcodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opcodes.swift; sourceTree = "<group>"; };
 		30C4CCD229BDE3EB0004CA7F /* machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = machine.swift; sourceTree = "<group>"; };
+		30FDBA8629E6DBF800483324 /* display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = display.swift; sourceTree = "<group>"; };
+		30FDBA8829E6DC6800483324 /* memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				30C4CCD029BDE3180004CA7F /* opcodes.swift */,
 				30C4CCD229BDE3EB0004CA7F /* machine.swift */,
 				3063F10929D1A4CF00928C16 /* ay.swift */,
+				30FDBA8629E6DBF800483324 /* display.swift */,
+				30FDBA8829E6DC6800483324 /* memory.swift */,
 			);
 			path = machine;
 			sourceTree = "<group>";
@@ -126,7 +132,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					30C4CCB629BC85ED0004CA7F = {
 						CreatedOnToolsVersion = 14.2;
@@ -173,6 +179,8 @@
 				30C4CCD129BDE3180004CA7F /* opcodes.swift in Sources */,
 				30C4CCCB29BC86D20004CA7F /* i8080.swift in Sources */,
 				30C4CCD329BDE3EB0004CA7F /* machine.swift in Sources */,
+				30FDBA8929E6DC6800483324 /* memory.swift in Sources */,
+				30FDBA8729E6DBF800483324 /* display.swift in Sources */,
 				30C4CCBD29BC85ED0004CA7F /* ViewController.swift in Sources */,
 				3063F10A29D1A4CF00928C16 /* ay.swift in Sources */,
 				30C4CCCD29BC8B4C0004CA7F /* cycles.swift in Sources */,
@@ -227,6 +235,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -287,6 +296,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -316,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = GCQ4TX8M8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -343,6 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = GCQ4TX8M8Z;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;

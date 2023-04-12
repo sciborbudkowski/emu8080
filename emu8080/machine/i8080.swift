@@ -1,13 +1,5 @@
 import Foundation
 
-class Memory {
-    var ram: [UInt8]
-
-    init(size: Int) {
-        self.ram = Array(repeating: UInt8(0), count: size)
-    }
-}
-
 class I8080 {
     var memory: Memory
 
@@ -44,9 +36,7 @@ class I8080 {
         } else if port == 1 {
             let operation: UInt8 = registers.c
 
-            if operation == 2 {
-                print("\(registers.e)")
-            } else if operation == 9 {
+            if operation == 9 {
                 let high: UInt16 = UInt16(registers.d)
                 let low: UInt16 = UInt16(registers.e)
                 var address = high << 8 | low
@@ -531,7 +521,7 @@ class I8080 {
     }
 
     func sub(register: UInt8, value: UInt8, cy: Bool) {
-        add(register: register, value: ~value, cy: !flags.cf)
+        add(register: register, value: ~value, cy: !cy)
         flags.cf = !flags.cf
     }
 
@@ -577,9 +567,7 @@ class I8080 {
     }
 
     func cmp(value: UInt8) {
-        //let result: UInt8 = registers.a &- value
         let result: Int16 = Int16(registers.a) - Int16(value)
-        print(result)
         flags.cf = result >> 8 == 0 ? false : true
         flags.hf = ~(Int16(registers.a) ^ result ^ Int16(value)) & 0x10 == 0 ? false : true
         zsp(value: result & 0xFF)
