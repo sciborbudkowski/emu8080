@@ -22,4 +22,29 @@ extension UInt16 {
     func asInt() -> Int {
         return Int(self)
     }
+
+    func asHex() -> String {
+        if self < 10 {
+            return "000" + String(self, radix: 16)
+        }
+        return String(self, radix: 16)
+    }
+}
+
+extension UInt8 {
+    func asHex() -> String {
+        if self < 10 {
+            return "0" + String(self, radix: 16)
+        }
+        return String(self, radix: 16)
+    }
+}
+
+extension Bool {
+    func asInt() -> Int {
+        if self {
+            return 1
+        }
+        return 0
+    }
 }
